@@ -1,0 +1,7 @@
+Courses API:
+  API url: "http://localhost:3000/api/users"
+  Method: "GET"
+
+Images API:
+  API url: "http://localhost:3000/images/{image-name}"
+  Method: "GET"
