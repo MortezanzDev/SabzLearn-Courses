@@ -1,6 +1,6 @@
 # Sabzlearn-Courses page
 
-This project is the small part of the [Sabzlearn](https://sabzlearn.ir) website 🙂 and we hope to enjoy you it
+This project is the small part of the [Sabzlearn](https://sabzlearn.ir) website 🙂 and we hope to you enjoy it
 
 
 ## Features
