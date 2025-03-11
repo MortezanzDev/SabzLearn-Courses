@@ -621,6 +621,9 @@
   .h-\[100px\] {
     height: 100px;
   }
+  .h-\[216px\] {
+    height: 216px;
+  }
   .h-\[323px\] {
     height: 323px;
   }
@@ -668,6 +671,9 @@
   }
   .w-7 {
     width: calc(var(--spacing) * 7);
+  }
+  .w-48 {
+    width: calc(var(--spacing) * 48);
   }
   .w-64 {
     width: calc(var(--spacing) * 64);
@@ -2634,6 +2640,16 @@
       height: calc(var(--spacing) * 10);
     }
   }
+  .md\:h-auto {
+    @media (width >= 48rem) {
+      height: auto;
+    }
+  }
+  .md\:w-auto {
+    @media (width >= 48rem) {
+      width: auto;
+    }
+  }
   .lg\:order-2 {
     @media (width >= 64rem) {
       order: 2;
@@ -2892,6 +2908,24 @@ button:hover,a:hover {
 .checkbox__input:checked~.checkbox__marker {
   opacity: 1 !important;
   background-color: #0a97d4 !important;
+}
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed #64748b;
+  border-radius: .75rem;
+  padding: 5rem 1.75rem 5rem 1.75rem;
+}
+.text-error {
+  text-align: center;
+  font-family: Dana Bold;
+  font-size: 1.125rem;
+  color: #62748e;
+  margin-top: 2rem;
+}
+:is(:where(.dark) .text-error) {
+  color: #fff !important;
 }
 @property --tw-translate-x {
   syntax: "*";
