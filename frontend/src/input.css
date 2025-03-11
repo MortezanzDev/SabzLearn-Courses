@@ -179,6 +179,8 @@ button:hover,a:hover {
 .error {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    width: 100%;
     align-items: center;
     border: 1px dashed #64748b;
     border-radius: .75rem;
@@ -186,8 +188,8 @@ button:hover,a:hover {
 }
 .text-error {
     text-align: center;
-    font-family: Dana Bold;
-    font-size: 1.125rem;
+    font-family: Dana DemiBold;
+    font-size: 1rem;
     color: #62748e;
     margin-top: 2rem;
 }
