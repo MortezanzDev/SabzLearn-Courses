@@ -142,12 +142,14 @@ document.addEventListener("DOMContentLoaded", function () {
 const courseContainer = document.getElementById("course-container");
 const resetFiltersBtn = document.getElementById("reset-filters-btn");
 const searchBoxFormEl = document.getElementById("searchbox-form");
-const accordionHeaderElems = Array.from(
-  document.querySelectorAll(".accordion-header")
+const accordionHeaderMobileElem = document.getElementById(
+  "accordion-header-mobile"
 );
-const accordionContentElems = Array.from(
+const accordionHeaderDesktopElem = document.getElementById("accordion-element");
+const accordionContentElem = Array.from(
   document.querySelectorAll(".accordion-content")
-);
+)[1];
+const accordionElement = document.getElementById("accordion-element");
 const categoryBtns = Array.from(document.querySelectorAll(".category-btn"));
 const courseCategoryBtns = Array.from(
   document.querySelectorAll(".course-category")
@@ -432,22 +434,21 @@ courseCategoryMobileBtns.forEach((btn) => {
     renderCourses(sortedCoursesData);
   });
 });
-accordionHeaderElems.forEach((elem) => {
-  elem.addEventListener("click", () => {
-    isHideCategory = !isHideCategory;
-    accordionContentElems.forEach((accContent) => {
-      accContent.classList.toggle("hidden");
-    });
-    categoryBtns.forEach((btn) => {
-      if (isHideCategory) {
-        btn.style.transform = "rotate(180deg)";
-      } else {
-        btn.style.transform = "rotate(0deg)";
-      }
-    });
+accordionHeaderMobileElem.addEventListener("click", () => {
+  isHideCategory = !isHideCategory;
+  accordionContentElem.classList.toggle("hidden");
+  categoryBtns.forEach((btn) => {
+    if (isHideCategory) {
+      btn.style.transform = "rotate(180deg)";
+    } else {
+      btn.style.transform = "rotate(0deg)";
+    }
   });
 });
-
+accordionHeaderDesktopElem.addEventListener("click", () => {
+  accordionElement.classList.toggle("h-17");
+  accordionElement.classList.toggle("overflow-hidden");
+});
 checkBoxesElems.forEach((checkBox) => {
   checkBox.addEventListener("click", (e) => {
     let category = e.target.parentElement.lastElementChild.textContent;
