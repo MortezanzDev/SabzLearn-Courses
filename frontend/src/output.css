@@ -2923,6 +2923,7 @@ button:hover,a:hover {
   text-align: center;
   font-family: Dana DemiBold;
   font-size: 1rem;
+  line-height: 2rem;
   color: #62748e;
   margin-top: 2rem;
 }
