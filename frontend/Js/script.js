@@ -86,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeFilter = document.querySelector(".close-filter");
   const applyFilter = document.querySelector(".apply-filter");
 
+  let isHideFilter = true;
   openNav.addEventListener("click", function () {
     menuContent.classList.add("active");
     overlay.classList.add("active");
@@ -99,6 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
   openFilter.addEventListener("click", function () {
     filterContent.classList.add("active");
     overlay.classList.add("active");
+    document.body.style.overflowY = "hidden";
   });
 
   overlay.addEventListener("click", function () {
@@ -129,6 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
   closeFilter.addEventListener("click", function () {
     filterContent.classList.remove("active");
     overlay.classList.remove("active");
+    document.body.style.overflowY = "scroll";
   });
 
   applyFilter.addEventListener("click", function () {
