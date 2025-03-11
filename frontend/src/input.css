@@ -184,3 +184,13 @@ button:hover,a:hover {
     border-radius: .75rem;
     padding: 5rem 1.75rem 5rem 1.75rem;
 }
+.text-error {
+    text-align: center;
+    font-family: Dana Bold;
+    font-size: 1.125rem;
+    color: #62748e;
+    margin-top: 2rem;
+}
+:is(:where(.dark) .text-error) {
+    color: #fff  !important;
+}

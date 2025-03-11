@@ -343,7 +343,7 @@ const renderCourses = (courses) => {
 								</filter>
 							</defs>
 					</svg>
-          <p class="text-lg md:text-xl text-center font-danaDemiBold text-slate-500 dark:text-white mt-8 md:mt-12">متاسفانه دوره ای مطابق با جستجوی شما پیدا نشد ):</p>
+          <p class="text-error">متاسفانه دوره ای مطابق با جستجوی شما پیدا نشد ):</p>
         </div>
       `
     );
