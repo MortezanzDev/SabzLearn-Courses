@@ -86,7 +86,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeFilter = document.querySelector(".close-filter");
   const applyFilter = document.querySelector(".apply-filter");
 
-
   openNav.addEventListener("click", function () {
     menuContent.classList.add("active");
     overlay.classList.add("active");
@@ -131,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
     filterContent.classList.remove("active");
     overlay.classList.remove("active");
   });
-  
+
   applyFilter.addEventListener("click", function () {
     filterContent.classList.remove("active");
     overlay.classList.remove("active");
@@ -280,7 +279,7 @@ const renderCourses = (courses) => {
       courseContainer.insertAdjacentHTML("beforeend", htmlTemplate);
     });
   } else {
-    courseContainer.insertAdjacentHTML(
+    document.getElementById("courses-section").insertAdjacentHTML(
       "beforeend",
       `
       <div class="error">
