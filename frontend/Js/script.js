@@ -451,6 +451,15 @@ accordionHeaderMobileElem.addEventListener("click", () => {
 accordionHeaderDesktopElem.addEventListener("click", () => {
   accordionElement.classList.toggle("h-17");
   accordionElement.classList.toggle("overflow-hidden");
+  isHideCategory = !isHideCategory;
+
+  categoryBtns.forEach((btn) => {
+    if (isHideCategory) {
+      btn.style.transform = "rotate(180deg)";
+    } else {
+      btn.style.transform = "rotate(0deg)";
+    }
+  });
 });
 checkBoxesElems.forEach((checkBox) => {
   checkBox.addEventListener("click", (e) => {
