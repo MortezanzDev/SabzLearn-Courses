@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const sortContent = document.querySelector(".sort-mobile-content");
   const filterContent = document.querySelector(".filter-mobile-content");
   const overlay = document.querySelector(".screen-overlay");
-  const close = document.querySelector(".close");
+  const closeBtns = Array.from(document.querySelectorAll(".close"));
   const closeFilter = document.querySelector(".close-filter");
   const applyFilter = document.querySelector(".apply-filter");
 
@@ -96,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
   openSort.addEventListener("click", function () {
     sortContent.classList.add("active");
     overlay.classList.add("active");
+    document.body.style.overflowY = "hidden";
   });
 
   openFilter.addEventListener("click", function () {
@@ -116,14 +117,13 @@ document.addEventListener("DOMContentLoaded", function () {
     overlay.classList.remove("active");
   });
 
-  close.addEventListener("click", function () {
-    menuContent.classList.remove("active");
-    overlay.classList.remove("active");
-  });
-
-  close.addEventListener("click", function () {
-    sortContent.classList.remove("active");
-    overlay.classList.remove("active");
+  closeBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      menuContent.classList.remove("active");
+      sortContent.classList.remove("active");
+      overlay.classList.remove("active");
+      document.body.style.overflowY = "auto";
+    });
   });
 
   closeFilter.addEventListener("click", function () {
