@@ -90,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
   openNav.addEventListener("click", function () {
     menuContent.classList.add("active");
     overlay.classList.add("active");
+    document.body.style.overflowY = "hidden";
   });
 
   openSort.addEventListener("click", function () {
@@ -104,13 +105,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   overlay.addEventListener("click", function () {
+    sortContent.classList.remove("active");
     menuContent.classList.remove("active");
     overlay.classList.remove("active");
-  });
-
-  overlay.addEventListener("click", function () {
-    sortContent.classList.remove("active");
-    overlay.classList.remove("active");
+    document.body.style.overflowY = "auto";
   });
 
   overlay.addEventListener("click", function () {
