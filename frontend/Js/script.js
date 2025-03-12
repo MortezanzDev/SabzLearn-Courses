@@ -148,7 +148,9 @@ const searchBoxFormEl = document.getElementById("searchbox-form");
 const accordionHeaderMobileElem = document.getElementById(
   "accordion-header-mobile"
 );
-const accordionHeaderDesktopElem = document.getElementById("accordion-element");
+const accordionHeaderDesktopElem = document.getElementById(
+  "accordion-header-desktop"
+);
 const accordionContentElem = Array.from(
   document.querySelectorAll(".accordion-content")
 )[1];
@@ -278,6 +280,7 @@ const renderCourses = (courses) => {
   }
 
   courseContainer.innerHTML = "";
+  document.querySelector(".error")?.remove();
   if (copyCoursesData.length) {
     copyCoursesData.forEach((course) => {
       const htmlTemplate = createCourseTemplate(course);
@@ -452,7 +455,6 @@ accordionHeaderDesktopElem.addEventListener("click", () => {
   accordionElement.classList.toggle("h-17");
   accordionElement.classList.toggle("overflow-hidden");
   isHideCategory = !isHideCategory;
-
   categoryBtns.forEach((btn) => {
     if (isHideCategory) {
       btn.style.transform = "rotate(180deg)";
