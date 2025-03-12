@@ -108,7 +108,7 @@
     "cover": "http://localhost:3000/images/laravel-reverb.webp",
     "instructor": "آرمین هوشمند",
     "students": 8491,
-    "preSale": true,
+    "preSale": false,
     "category": "بک اند"
   }
 ]
