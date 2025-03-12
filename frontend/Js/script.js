@@ -137,6 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
   applyFilter.addEventListener("click", function () {
     filterContent.classList.remove("active");
     overlay.classList.remove("active");
+    document.body.style.overflowY = "auto";
   });
 });
 
